@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: fastapi-service
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn -k uvicorn.workers.UvicornWorker main:app
+    plan: free
